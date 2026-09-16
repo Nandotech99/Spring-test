@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service // INDICA QUE ESTA CLASSE É UM SERVICO
 public class HelloWorldService {
+
     public String hello(String name){
         return "Eae, "+ name+"! Tudo bem?";
     }

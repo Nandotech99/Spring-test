@@ -1,8 +1,7 @@
 package com.example.primeiroSpring.Controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.primeiroSpring.Servico.HelloWorldService;
+import org.springframework.web.bind.annotation.*;
 
 
 //O CONTROLER RECEBE A REQUISIÇÃO E PASSA PARA A CLASSE SERVECE PARA PROCESSAR
@@ -22,9 +21,26 @@ HTTP - POST, PUT, GET, DELETE
     ESTE METODO  RESPONDE AO METODO GET NO END-POINT /hello-world
    NA URL ->  /GET/hello-world
     */
+
+
     @GetMapping // ESTE METODO RESPONDE AO METODO GET DO HTTP
     public String hello(){
-        return "Hey, guys 👋!";
-    }
+       return "Hey, guys 👋!";
+   }
+
+   @GetMapping ("/{nome}")
+    public String get1(@PathVariable String nome){
+        return "Eae, "+ nome+"! Tranquilo!?";
+   }
+
+   @GetMapping("/get")
+    public String get2(@RequestParam (required= false) String nome){
+        return "Eae, de boa "+nome+"! 😊";
+   }
+
+
+
+
+
 
 }
