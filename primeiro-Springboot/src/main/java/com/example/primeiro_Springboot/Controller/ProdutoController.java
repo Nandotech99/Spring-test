@@ -9,7 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+// O CONTROLLER É O INETERMEDIARIO ENTRE A VIEW E A MODEL
+// RECEBE  AS REQUISIÇÕES E CHAMA OS METODOS DO SERVICE PARA REALIZAR AS OPERAÇÕES
 // DEVEMOS SEMPRE ANOTAR OQ A CLASSE É
 @RestController
 @RequestMapping("/v1/produtos")
@@ -27,8 +28,19 @@ private final ProdutoService produtoService;
 @PostMapping
 @ResponseStatus(HttpStatus.CREATED)
 public ProdutoEntidade post (@RequestBody ProdutoDTO produtoDTO){
+
     return produtoService.post(produtoDTO);
 }
 
+@PutMapping("/{id}") // CAMINHO ESPERANDO UMA ID Q EXISTE NA LISTA
+@ResponseStatus(HttpStatus.CREATED)
+public ProdutoEntidade put(@PathVariable int id, @RequestBody ProdutoDTO produtoDTO){
+    return  produtoService.put(produtoDTO,id);
+}
+@DeleteMapping("/{id}")
+@ResponseStatus(HttpStatus.CREATED)
+public void delete(@PathVariable int id){
+    produtoService.delete(id);
+}
 
 }

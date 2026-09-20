@@ -21,7 +21,7 @@ public class ProdutoEntidade {
         this.qtd = qtd;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 }
