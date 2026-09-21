@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.OptionalInt;
 
 // A CLASSE SERVICE É ONDE VOU GUARDAR A LOGICA DAS MINHAS REGRAS DE NEGOCIO
+// È  ela que realiza as operações de fato
 
 // DEVEMOS SEMPRE ANOTAR OQ A CLASSE É
 @Service

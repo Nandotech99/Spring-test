@@ -5,6 +5,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+// Esta classe é feita para criar um produto sem precisar do id
 public class ProdutoDTO {
     private String nome;
     private double preco;

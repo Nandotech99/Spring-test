@@ -7,6 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+// Classe criada para representar uma entidade no banco de dados
 public class ProdutoEntidade {
     private String nome;
     private double preco;
